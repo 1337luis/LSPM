@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LSPM
 {
-    public partial class Form1 : Form
+    public partial class editDataForm : Form
     {
-        public Form1()
+        public editDataForm()
         {
             InitializeComponent();
         }
