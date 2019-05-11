@@ -69,6 +69,7 @@
             this.loginButton.TabIndex = 4;
             this.loginButton.Text = "Iniciar";
             this.loginButton.UseVisualStyleBackColor = true;
+            this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 
             // loginSaveButton
             // 
@@ -81,6 +82,7 @@
             this.loginSaveButton.TabIndex = 7;
             this.loginSaveButton.Text = "Iniciar y Recordar";
             this.loginSaveButton.UseVisualStyleBackColor = true;
+            this.loginSaveButton.Click += new System.EventHandler(this.loginSaveButton_Click);
             // 
             // LSPMPassword
             // 
@@ -101,6 +103,7 @@
             this.Name = "LSPMPassword";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Acceso LSPM";
+            this.Load += new System.EventHandler(this.LSPMPassword_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

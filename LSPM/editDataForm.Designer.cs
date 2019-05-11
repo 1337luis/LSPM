@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(editDataForm));
             this.infoGroupBox = new System.Windows.Forms.GroupBox();
-            this.panel12 = new System.Windows.Forms.Panel();
+            this.passwordPanel = new System.Windows.Forms.Panel();
             this.passwordInput = new System.Windows.Forms.TextBox();
             this.passInputLabel = new System.Windows.Forms.Label();
-            this.panel11 = new System.Windows.Forms.Panel();
+            this.userPanel = new System.Windows.Forms.Panel();
             this.userInput = new System.Windows.Forms.TextBox();
             this.userInputLabel = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.aliasPanel = new System.Windows.Forms.Panel();
             this.aliasInput = new System.Windows.Forms.TextBox();
             this.aliasInputlabel = new System.Windows.Forms.Label();
             this.viewGroupBox = new System.Windows.Forms.GroupBox();
@@ -54,18 +54,18 @@
             this.pinkColorPanel = new System.Windows.Forms.Panel();
             this.performEditButton = new System.Windows.Forms.Button();
             this.infoGroupBox.SuspendLayout();
-            this.panel12.SuspendLayout();
-            this.panel11.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.passwordPanel.SuspendLayout();
+            this.userPanel.SuspendLayout();
+            this.aliasPanel.SuspendLayout();
             this.viewGroupBox.SuspendLayout();
             this.colorSelectorContainer.SuspendLayout();
             this.SuspendLayout();
             // 
             // infoGroupBox
             // 
-            this.infoGroupBox.Controls.Add(this.panel12);
-            this.infoGroupBox.Controls.Add(this.panel11);
-            this.infoGroupBox.Controls.Add(this.panel1);
+            this.infoGroupBox.Controls.Add(this.passwordPanel);
+            this.infoGroupBox.Controls.Add(this.userPanel);
+            this.infoGroupBox.Controls.Add(this.aliasPanel);
             this.infoGroupBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.infoGroupBox.Location = new System.Drawing.Point(12, 12);
             this.infoGroupBox.Name = "infoGroupBox";
@@ -75,14 +75,14 @@
             this.infoGroupBox.Text = "Información";
             this.infoGroupBox.UseCompatibleTextRendering = true;
             // 
-            // panel12
+            // passwordPanel
             // 
-            this.panel12.Controls.Add(this.passwordInput);
-            this.panel12.Controls.Add(this.passInputLabel);
-            this.panel12.Location = new System.Drawing.Point(6, 145);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(277, 56);
-            this.panel12.TabIndex = 4;
+            this.passwordPanel.Controls.Add(this.passwordInput);
+            this.passwordPanel.Controls.Add(this.passInputLabel);
+            this.passwordPanel.Location = new System.Drawing.Point(6, 145);
+            this.passwordPanel.Name = "passwordPanel";
+            this.passwordPanel.Size = new System.Drawing.Size(277, 56);
+            this.passwordPanel.TabIndex = 2;
             // 
             // passwordInput
             // 
@@ -93,7 +93,7 @@
             this.passwordInput.Location = new System.Drawing.Point(5, 25);
             this.passwordInput.Name = "passwordInput";
             this.passwordInput.Size = new System.Drawing.Size(266, 26);
-            this.passwordInput.TabIndex = 0;
+            this.passwordInput.TabIndex = 2;
             this.passwordInput.UseSystemPasswordChar = true;
             // 
             // passInputLabel
@@ -105,14 +105,14 @@
             this.passInputLabel.TabIndex = 2;
             this.passInputLabel.Text = "Contraseña";
             // 
-            // panel11
+            // userPanel
             // 
-            this.panel11.Controls.Add(this.userInput);
-            this.panel11.Controls.Add(this.userInputLabel);
-            this.panel11.Location = new System.Drawing.Point(6, 83);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(277, 56);
-            this.panel11.TabIndex = 4;
+            this.userPanel.Controls.Add(this.userInput);
+            this.userPanel.Controls.Add(this.userInputLabel);
+            this.userPanel.Location = new System.Drawing.Point(6, 83);
+            this.userPanel.Name = "userPanel";
+            this.userPanel.Size = new System.Drawing.Size(277, 56);
+            this.userPanel.TabIndex = 1;
             // 
             // userInput
             // 
@@ -123,7 +123,7 @@
             this.userInput.Location = new System.Drawing.Point(5, 25);
             this.userInput.Name = "userInput";
             this.userInput.Size = new System.Drawing.Size(266, 26);
-            this.userInput.TabIndex = 0;
+            this.userInput.TabIndex = 1;
             // 
             // userInputLabel
             // 
@@ -134,23 +134,25 @@
             this.userInputLabel.TabIndex = 2;
             this.userInputLabel.Text = "Nombre de Usuario";
             // 
-            // panel1
+            // aliasPanel
             // 
-            this.panel1.Controls.Add(this.aliasInput);
-            this.panel1.Controls.Add(this.aliasInputlabel);
-            this.panel1.Location = new System.Drawing.Point(6, 21);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(277, 56);
-            this.panel1.TabIndex = 3;
+            this.aliasPanel.Controls.Add(this.aliasInput);
+            this.aliasPanel.Controls.Add(this.aliasInputlabel);
+            this.aliasPanel.Location = new System.Drawing.Point(6, 21);
+            this.aliasPanel.Name = "aliasPanel";
+            this.aliasPanel.Size = new System.Drawing.Size(277, 56);
+            this.aliasPanel.TabIndex = 0;
             // 
             // aliasInput
             // 
             this.aliasInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
             this.aliasInput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.aliasInput.Enabled = false;
             this.aliasInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.aliasInput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
             this.aliasInput.Location = new System.Drawing.Point(5, 25);
             this.aliasInput.Name = "aliasInput";
+            this.aliasInput.ReadOnly = true;
             this.aliasInput.Size = new System.Drawing.Size(266, 26);
             this.aliasInput.TabIndex = 0;
             // 
@@ -159,9 +161,9 @@
             this.aliasInputlabel.AutoSize = true;
             this.aliasInputlabel.Location = new System.Drawing.Point(8, 6);
             this.aliasInputlabel.Name = "aliasInputlabel";
-            this.aliasInputlabel.Size = new System.Drawing.Size(101, 16);
+            this.aliasInputlabel.Size = new System.Drawing.Size(38, 16);
             this.aliasInputlabel.TabIndex = 2;
-            this.aliasInputlabel.Text = "Nombre o Alias";
+            this.aliasInputlabel.Text = "Alias";
             // 
             // viewGroupBox
             // 
@@ -172,7 +174,7 @@
             this.viewGroupBox.Location = new System.Drawing.Point(12, 237);
             this.viewGroupBox.Name = "viewGroupBox";
             this.viewGroupBox.Size = new System.Drawing.Size(290, 113);
-            this.viewGroupBox.TabIndex = 1;
+            this.viewGroupBox.TabIndex = 3;
             this.viewGroupBox.TabStop = false;
             this.viewGroupBox.Text = "Visualización";
             this.viewGroupBox.UseCompatibleTextRendering = true;
@@ -193,7 +195,7 @@
             this.passwordAccessCheck.Location = new System.Drawing.Point(6, 87);
             this.passwordAccessCheck.Name = "passwordAccessCheck";
             this.passwordAccessCheck.Size = new System.Drawing.Size(198, 20);
-            this.passwordAccessCheck.TabIndex = 2;
+            this.passwordAccessCheck.TabIndex = 4;
             this.passwordAccessCheck.Text = "Acceso rápido a Contraseña";
             this.passwordAccessCheck.UseVisualStyleBackColor = true;
             // 
@@ -221,6 +223,7 @@
             this.whiteColorPanel.Name = "whiteColorPanel";
             this.whiteColorPanel.Size = new System.Drawing.Size(24, 24);
             this.whiteColorPanel.TabIndex = 5;
+            this.whiteColorPanel.Click += new System.EventHandler(this.whiteColorPanel_Click);
             // 
             // yellowColorPanel
             // 
@@ -230,6 +233,7 @@
             this.yellowColorPanel.Name = "yellowColorPanel";
             this.yellowColorPanel.Size = new System.Drawing.Size(24, 24);
             this.yellowColorPanel.TabIndex = 5;
+            this.yellowColorPanel.Click += new System.EventHandler(this.yellowColorPanel_Click);
             // 
             // blackColorPanel
             // 
@@ -239,6 +243,7 @@
             this.blackColorPanel.Name = "blackColorPanel";
             this.blackColorPanel.Size = new System.Drawing.Size(24, 24);
             this.blackColorPanel.TabIndex = 3;
+            this.blackColorPanel.Click += new System.EventHandler(this.blackColorPanel_Click);
             // 
             // blueColorPanel
             // 
@@ -248,6 +253,7 @@
             this.blueColorPanel.Name = "blueColorPanel";
             this.blueColorPanel.Size = new System.Drawing.Size(24, 24);
             this.blueColorPanel.TabIndex = 7;
+            this.blueColorPanel.Click += new System.EventHandler(this.blueColorPanel_Click);
             // 
             // purpleColorPanel
             // 
@@ -257,6 +263,7 @@
             this.purpleColorPanel.Name = "purpleColorPanel";
             this.purpleColorPanel.Size = new System.Drawing.Size(24, 24);
             this.purpleColorPanel.TabIndex = 4;
+            this.purpleColorPanel.Click += new System.EventHandler(this.purpleColorPanel_Click);
             // 
             // orangeColorPanel
             // 
@@ -266,6 +273,7 @@
             this.orangeColorPanel.Name = "orangeColorPanel";
             this.orangeColorPanel.Size = new System.Drawing.Size(24, 24);
             this.orangeColorPanel.TabIndex = 7;
+            this.orangeColorPanel.Click += new System.EventHandler(this.orangeColorPanel_Click);
             // 
             // redColorPanel
             // 
@@ -275,6 +283,7 @@
             this.redColorPanel.Name = "redColorPanel";
             this.redColorPanel.Size = new System.Drawing.Size(24, 24);
             this.redColorPanel.TabIndex = 6;
+            this.redColorPanel.Click += new System.EventHandler(this.redColorPanel_Click);
             // 
             // greenColorPanel
             // 
@@ -284,6 +293,7 @@
             this.greenColorPanel.Name = "greenColorPanel";
             this.greenColorPanel.Size = new System.Drawing.Size(24, 24);
             this.greenColorPanel.TabIndex = 6;
+            this.greenColorPanel.Click += new System.EventHandler(this.greenColorPanel_Click);
             // 
             // pinkColorPanel
             // 
@@ -293,6 +303,7 @@
             this.pinkColorPanel.Name = "pinkColorPanel";
             this.pinkColorPanel.Size = new System.Drawing.Size(24, 24);
             this.pinkColorPanel.TabIndex = 3;
+            this.pinkColorPanel.Click += new System.EventHandler(this.pinkColorPanel_Click);
             // 
             // performEditButton
             // 
@@ -301,9 +312,10 @@
             this.performEditButton.Location = new System.Drawing.Point(12, 356);
             this.performEditButton.Name = "performEditButton";
             this.performEditButton.Size = new System.Drawing.Size(290, 33);
-            this.performEditButton.TabIndex = 2;
+            this.performEditButton.TabIndex = 5;
             this.performEditButton.Text = "Modificar";
             this.performEditButton.UseVisualStyleBackColor = true;
+            this.performEditButton.Click += new System.EventHandler(this.performEditButton_Click);
             // 
             // editDataForm
             // 
@@ -323,13 +335,14 @@
             this.Name = "editDataForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar Datos";
+            this.Load += new System.EventHandler(this.editDataForm_Load);
             this.infoGroupBox.ResumeLayout(false);
-            this.panel12.ResumeLayout(false);
-            this.panel12.PerformLayout();
-            this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.passwordPanel.ResumeLayout(false);
+            this.passwordPanel.PerformLayout();
+            this.userPanel.ResumeLayout(false);
+            this.userPanel.PerformLayout();
+            this.aliasPanel.ResumeLayout(false);
+            this.aliasPanel.PerformLayout();
             this.viewGroupBox.ResumeLayout(false);
             this.viewGroupBox.PerformLayout();
             this.colorSelectorContainer.ResumeLayout(false);
@@ -351,13 +364,13 @@
         private System.Windows.Forms.Panel redColorPanel;
         private System.Windows.Forms.Panel greenColorPanel;
         private System.Windows.Forms.Panel pinkColorPanel;
-        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Panel passwordPanel;
         private System.Windows.Forms.TextBox passwordInput;
         private System.Windows.Forms.Label passInputLabel;
-        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Panel userPanel;
         private System.Windows.Forms.TextBox userInput;
         private System.Windows.Forms.Label userInputLabel;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel aliasPanel;
         private System.Windows.Forms.TextBox aliasInput;
         private System.Windows.Forms.Label aliasInputlabel;
         private System.Windows.Forms.CheckBox userAccessCheck;

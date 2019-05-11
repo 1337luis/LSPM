@@ -9,19 +9,50 @@ namespace LSPM
 {
     class LSPMData
     {
+        public enum DataIcon
+        {
+            Black,
+            Blue,
+            Green,
+            Orange,
+            Pink,
+            Purple,
+            Red,
+            White,
+            Yellow
+        }
+
         public Guid Id { get; set; }
         [BsonField("username")]
         public string lUser { get; set; }
         [BsonField( "password" )]
         public string lPass { get; set; }
-        [BsonField( "name" )]
-        public string lName { get; set; }
+        [BsonField( "alias" )]
+        public string lAlias { get; set; }
+        [BsonField( "userFastAccess" )]
+        public bool lUserFastAccess { get; set; }
+        [BsonField( "passwordFastAccess" )]
+        public bool lPasswordFastAccess { get; set; }
+        [BsonField( "dataIcon" )]
+        public DataIcon lDataIcon { get; set; }
 
-        public LSPMData( string user, string password, string name)
+        public LSPMData( string user, string password, string alias, bool userFastAccess = false, bool passwordFastAccess = false, DataIcon dataIcon = DataIcon.Pink )
         {
             lUser = user;
             lPass = password;
-            lName = name;
+            lAlias = alias;
+            lUserFastAccess = userFastAccess;
+            lPasswordFastAccess = passwordFastAccess;
+            lDataIcon = dataIcon;
+        }
+
+        public LSPMData()
+        {
+            lUser = "NULL";
+            lPass = "NULL";
+            lAlias = "NULL";
+            lUserFastAccess = false;
+            lPasswordFastAccess = false;
         }
     }
 }

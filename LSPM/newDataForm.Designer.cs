@@ -46,7 +46,7 @@
             this.whiteColorPanel = new System.Windows.Forms.Panel();
             this.yellowColorPanel = new System.Windows.Forms.Panel();
             this.blackColorPanel = new System.Windows.Forms.Panel();
-            this.bueColorPanel = new System.Windows.Forms.Panel();
+            this.blueColorPanel = new System.Windows.Forms.Panel();
             this.purpleColorPanel = new System.Windows.Forms.Panel();
             this.orangeColorPanel = new System.Windows.Forms.Panel();
             this.redColorPanel = new System.Windows.Forms.Panel();
@@ -82,7 +82,7 @@
             this.passwordPanel.Location = new System.Drawing.Point(6, 145);
             this.passwordPanel.Name = "passwordPanel";
             this.passwordPanel.Size = new System.Drawing.Size(277, 56);
-            this.passwordPanel.TabIndex = 4;
+            this.passwordPanel.TabIndex = 2;
             // 
             // passwordInput
             // 
@@ -93,7 +93,7 @@
             this.passwordInput.Location = new System.Drawing.Point(5, 25);
             this.passwordInput.Name = "passwordInput";
             this.passwordInput.Size = new System.Drawing.Size(266, 26);
-            this.passwordInput.TabIndex = 0;
+            this.passwordInput.TabIndex = 2;
             this.passwordInput.UseSystemPasswordChar = true;
             // 
             // passInputLabel
@@ -112,7 +112,7 @@
             this.userPanel.Location = new System.Drawing.Point(6, 83);
             this.userPanel.Name = "userPanel";
             this.userPanel.Size = new System.Drawing.Size(277, 56);
-            this.userPanel.TabIndex = 4;
+            this.userPanel.TabIndex = 1;
             // 
             // userInput
             // 
@@ -123,7 +123,7 @@
             this.userInput.Location = new System.Drawing.Point(5, 25);
             this.userInput.Name = "userInput";
             this.userInput.Size = new System.Drawing.Size(266, 26);
-            this.userInput.TabIndex = 0;
+            this.userInput.TabIndex = 1;
             // 
             // userInputLabel
             // 
@@ -141,7 +141,7 @@
             this.aliasPanel.Location = new System.Drawing.Point(6, 21);
             this.aliasPanel.Name = "aliasPanel";
             this.aliasPanel.Size = new System.Drawing.Size(277, 56);
-            this.aliasPanel.TabIndex = 3;
+            this.aliasPanel.TabIndex = 0;
             // 
             // aliasInput
             // 
@@ -172,7 +172,7 @@
             this.viewGroupBox.Location = new System.Drawing.Point(12, 237);
             this.viewGroupBox.Name = "viewGroupBox";
             this.viewGroupBox.Size = new System.Drawing.Size(290, 113);
-            this.viewGroupBox.TabIndex = 1;
+            this.viewGroupBox.TabIndex = 3;
             this.viewGroupBox.TabStop = false;
             this.viewGroupBox.Text = "Visualización";
             this.viewGroupBox.UseCompatibleTextRendering = true;
@@ -193,7 +193,7 @@
             this.passwordAccessCheck.Location = new System.Drawing.Point(6, 87);
             this.passwordAccessCheck.Name = "passwordAccessCheck";
             this.passwordAccessCheck.Size = new System.Drawing.Size(198, 20);
-            this.passwordAccessCheck.TabIndex = 2;
+            this.passwordAccessCheck.TabIndex = 4;
             this.passwordAccessCheck.Text = "Acceso rápido a Contraseña";
             this.passwordAccessCheck.UseVisualStyleBackColor = true;
             // 
@@ -202,7 +202,7 @@
             this.colorSelectorContainer.Controls.Add(this.whiteColorPanel);
             this.colorSelectorContainer.Controls.Add(this.yellowColorPanel);
             this.colorSelectorContainer.Controls.Add(this.blackColorPanel);
-            this.colorSelectorContainer.Controls.Add(this.bueColorPanel);
+            this.colorSelectorContainer.Controls.Add(this.blueColorPanel);
             this.colorSelectorContainer.Controls.Add(this.purpleColorPanel);
             this.colorSelectorContainer.Controls.Add(this.orangeColorPanel);
             this.colorSelectorContainer.Controls.Add(this.redColorPanel);
@@ -221,6 +221,7 @@
             this.whiteColorPanel.Name = "whiteColorPanel";
             this.whiteColorPanel.Size = new System.Drawing.Size(24, 24);
             this.whiteColorPanel.TabIndex = 5;
+            this.whiteColorPanel.Click += new System.EventHandler(this.whiteColorPanel_Click);
             // 
             // yellowColorPanel
             // 
@@ -230,6 +231,7 @@
             this.yellowColorPanel.Name = "yellowColorPanel";
             this.yellowColorPanel.Size = new System.Drawing.Size(24, 24);
             this.yellowColorPanel.TabIndex = 5;
+            this.yellowColorPanel.Click += new System.EventHandler(this.yellowColorPanel_Click);
             // 
             // blackColorPanel
             // 
@@ -239,15 +241,17 @@
             this.blackColorPanel.Name = "blackColorPanel";
             this.blackColorPanel.Size = new System.Drawing.Size(24, 24);
             this.blackColorPanel.TabIndex = 3;
+            this.blackColorPanel.Click += new System.EventHandler(this.blackColorPanel_Click);
             // 
-            // bueColorPanel
+            // blueColorPanel
             // 
-            this.bueColorPanel.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.bueColorPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bueColorPanel.Location = new System.Drawing.Point(217, 4);
-            this.bueColorPanel.Name = "bueColorPanel";
-            this.bueColorPanel.Size = new System.Drawing.Size(24, 24);
-            this.bueColorPanel.TabIndex = 7;
+            this.blueColorPanel.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.blueColorPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.blueColorPanel.Location = new System.Drawing.Point(217, 4);
+            this.blueColorPanel.Name = "blueColorPanel";
+            this.blueColorPanel.Size = new System.Drawing.Size(24, 24);
+            this.blueColorPanel.TabIndex = 7;
+            this.blueColorPanel.Click += new System.EventHandler(this.blueColorPanel_Click);
             // 
             // purpleColorPanel
             // 
@@ -257,6 +261,7 @@
             this.purpleColorPanel.Name = "purpleColorPanel";
             this.purpleColorPanel.Size = new System.Drawing.Size(24, 24);
             this.purpleColorPanel.TabIndex = 4;
+            this.purpleColorPanel.Click += new System.EventHandler(this.purpleColorPanel_Click);
             // 
             // orangeColorPanel
             // 
@@ -266,6 +271,7 @@
             this.orangeColorPanel.Name = "orangeColorPanel";
             this.orangeColorPanel.Size = new System.Drawing.Size(24, 24);
             this.orangeColorPanel.TabIndex = 7;
+            this.orangeColorPanel.Click += new System.EventHandler(this.orangeColorPanel_Click);
             // 
             // redColorPanel
             // 
@@ -275,6 +281,7 @@
             this.redColorPanel.Name = "redColorPanel";
             this.redColorPanel.Size = new System.Drawing.Size(24, 24);
             this.redColorPanel.TabIndex = 6;
+            this.redColorPanel.Click += new System.EventHandler(this.redColorPanel_Click);
             // 
             // greenColorPanel
             // 
@@ -284,6 +291,7 @@
             this.greenColorPanel.Name = "greenColorPanel";
             this.greenColorPanel.Size = new System.Drawing.Size(24, 24);
             this.greenColorPanel.TabIndex = 6;
+            this.greenColorPanel.Click += new System.EventHandler(this.greenColorPanel_Click);
             // 
             // pinkColorPanel
             // 
@@ -293,6 +301,7 @@
             this.pinkColorPanel.Name = "pinkColorPanel";
             this.pinkColorPanel.Size = new System.Drawing.Size(24, 24);
             this.pinkColorPanel.TabIndex = 3;
+            this.pinkColorPanel.Click += new System.EventHandler(this.pinkColorPanel_Click);
             // 
             // performAddButton
             // 
@@ -301,9 +310,10 @@
             this.performAddButton.Location = new System.Drawing.Point(12, 356);
             this.performAddButton.Name = "performAddButton";
             this.performAddButton.Size = new System.Drawing.Size(290, 33);
-            this.performAddButton.TabIndex = 2;
+            this.performAddButton.TabIndex = 5;
             this.performAddButton.Text = "Agregar";
             this.performAddButton.UseVisualStyleBackColor = true;
+            this.performAddButton.Click += new System.EventHandler(this.performAddButton_Click);
             // 
             // newDataForm
             // 
@@ -323,6 +333,7 @@
             this.Name = "newDataForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar Datos";
+            this.Load += new System.EventHandler(this.newDataForm_Load);
             this.infoGroupBox.ResumeLayout(false);
             this.passwordPanel.ResumeLayout(false);
             this.passwordPanel.PerformLayout();
@@ -345,7 +356,7 @@
         private System.Windows.Forms.Panel whiteColorPanel;
         private System.Windows.Forms.Panel yellowColorPanel;
         private System.Windows.Forms.Panel blackColorPanel;
-        private System.Windows.Forms.Panel bueColorPanel;
+        private System.Windows.Forms.Panel blueColorPanel;
         private System.Windows.Forms.Panel purpleColorPanel;
         private System.Windows.Forms.Panel orangeColorPanel;
         private System.Windows.Forms.Panel redColorPanel;
