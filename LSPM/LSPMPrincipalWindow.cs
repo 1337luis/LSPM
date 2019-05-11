@@ -39,7 +39,7 @@ namespace LSPM
                 loadData();
             } else
             {
-                Close();
+                Application.Exit();
             }
 
             
