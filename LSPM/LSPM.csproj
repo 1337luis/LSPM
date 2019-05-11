@@ -72,6 +72,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="editDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editDataForm.designer.cs">
+      <DependentUpon>editDataForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LSPMDatabase.cs" />
     <Compile Include="LSPMPassword.cs">
       <SubType>Form</SubType>
@@ -100,6 +106,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="editDataForm.resx">
+      <DependentUpon>editDataForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LSPMPassword.resx">
       <DependentUpon>LSPMPassword.cs</DependentUpon>
     </EmbeddedResource>
