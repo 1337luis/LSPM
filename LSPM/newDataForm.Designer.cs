@@ -29,281 +29,281 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(newDataForm));
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.infoGroupBox = new System.Windows.Forms.GroupBox();
+            this.passwordPanel = new System.Windows.Forms.Panel();
+            this.passwordInput = new System.Windows.Forms.TextBox();
+            this.passInputLabel = new System.Windows.Forms.Label();
+            this.userPanel = new System.Windows.Forms.Panel();
+            this.userInput = new System.Windows.Forms.TextBox();
+            this.userInputLabel = new System.Windows.Forms.Label();
+            this.aliasPanel = new System.Windows.Forms.Panel();
+            this.aliasInput = new System.Windows.Forms.TextBox();
+            this.aliasInputLabel = new System.Windows.Forms.Label();
+            this.viewGroupBox = new System.Windows.Forms.GroupBox();
+            this.userAccessCheck = new System.Windows.Forms.CheckBox();
+            this.passwordAccessCheck = new System.Windows.Forms.CheckBox();
             this.colorSelectorContainer = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.whiteColorPanel = new System.Windows.Forms.Panel();
+            this.yellowColorPanel = new System.Windows.Forms.Panel();
+            this.blackColorPanel = new System.Windows.Forms.Panel();
+            this.bueColorPanel = new System.Windows.Forms.Panel();
+            this.purpleColorPanel = new System.Windows.Forms.Panel();
+            this.orangeColorPanel = new System.Windows.Forms.Panel();
+            this.redColorPanel = new System.Windows.Forms.Panel();
+            this.greenColorPanel = new System.Windows.Forms.Panel();
+            this.pinkColorPanel = new System.Windows.Forms.Panel();
+            this.performAddButton = new System.Windows.Forms.Button();
+            this.infoGroupBox.SuspendLayout();
+            this.passwordPanel.SuspendLayout();
+            this.userPanel.SuspendLayout();
+            this.aliasPanel.SuspendLayout();
+            this.viewGroupBox.SuspendLayout();
             this.colorSelectorContainer.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel11.SuspendLayout();
-            this.panel12.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // infoGroupBox
             // 
-            this.groupBox1.Controls.Add(this.panel12);
-            this.groupBox1.Controls.Add(this.panel11);
-            this.groupBox1.Controls.Add(this.panel1);
-            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(290, 219);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Información";
-            this.groupBox1.UseCompatibleTextRendering = true;
+            this.infoGroupBox.Controls.Add(this.passwordPanel);
+            this.infoGroupBox.Controls.Add(this.userPanel);
+            this.infoGroupBox.Controls.Add(this.aliasPanel);
+            this.infoGroupBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.infoGroupBox.Location = new System.Drawing.Point(12, 12);
+            this.infoGroupBox.Name = "infoGroupBox";
+            this.infoGroupBox.Size = new System.Drawing.Size(290, 219);
+            this.infoGroupBox.TabIndex = 0;
+            this.infoGroupBox.TabStop = false;
+            this.infoGroupBox.Text = "Información";
+            this.infoGroupBox.UseCompatibleTextRendering = true;
             // 
-            // groupBox2
+            // passwordPanel
             // 
-            this.groupBox2.Controls.Add(this.checkBox2);
-            this.groupBox2.Controls.Add(this.checkBox1);
-            this.groupBox2.Controls.Add(this.colorSelectorContainer);
-            this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.groupBox2.Location = new System.Drawing.Point(12, 237);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(290, 113);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Visualización";
-            this.groupBox2.UseCompatibleTextRendering = true;
+            this.passwordPanel.Controls.Add(this.passwordInput);
+            this.passwordPanel.Controls.Add(this.passInputLabel);
+            this.passwordPanel.Location = new System.Drawing.Point(6, 145);
+            this.passwordPanel.Name = "passwordPanel";
+            this.passwordPanel.Size = new System.Drawing.Size(277, 56);
+            this.passwordPanel.TabIndex = 4;
+            // 
+            // passwordInput
+            // 
+            this.passwordInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.passwordInput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.passwordInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordInput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
+            this.passwordInput.Location = new System.Drawing.Point(5, 25);
+            this.passwordInput.Name = "passwordInput";
+            this.passwordInput.Size = new System.Drawing.Size(266, 26);
+            this.passwordInput.TabIndex = 0;
+            this.passwordInput.UseSystemPasswordChar = true;
+            // 
+            // passInputLabel
+            // 
+            this.passInputLabel.AutoSize = true;
+            this.passInputLabel.Location = new System.Drawing.Point(8, 6);
+            this.passInputLabel.Name = "passInputLabel";
+            this.passInputLabel.Size = new System.Drawing.Size(77, 16);
+            this.passInputLabel.TabIndex = 2;
+            this.passInputLabel.Text = "Contraseña";
+            // 
+            // userPanel
+            // 
+            this.userPanel.Controls.Add(this.userInput);
+            this.userPanel.Controls.Add(this.userInputLabel);
+            this.userPanel.Location = new System.Drawing.Point(6, 83);
+            this.userPanel.Name = "userPanel";
+            this.userPanel.Size = new System.Drawing.Size(277, 56);
+            this.userPanel.TabIndex = 4;
+            // 
+            // userInput
+            // 
+            this.userInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.userInput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.userInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userInput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
+            this.userInput.Location = new System.Drawing.Point(5, 25);
+            this.userInput.Name = "userInput";
+            this.userInput.Size = new System.Drawing.Size(266, 26);
+            this.userInput.TabIndex = 0;
+            // 
+            // userInputLabel
+            // 
+            this.userInputLabel.AutoSize = true;
+            this.userInputLabel.Location = new System.Drawing.Point(8, 6);
+            this.userInputLabel.Name = "userInputLabel";
+            this.userInputLabel.Size = new System.Drawing.Size(126, 16);
+            this.userInputLabel.TabIndex = 2;
+            this.userInputLabel.Text = "Nombre de Usuario";
+            // 
+            // aliasPanel
+            // 
+            this.aliasPanel.Controls.Add(this.aliasInput);
+            this.aliasPanel.Controls.Add(this.aliasInputLabel);
+            this.aliasPanel.Location = new System.Drawing.Point(6, 21);
+            this.aliasPanel.Name = "aliasPanel";
+            this.aliasPanel.Size = new System.Drawing.Size(277, 56);
+            this.aliasPanel.TabIndex = 3;
+            // 
+            // aliasInput
+            // 
+            this.aliasInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.aliasInput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.aliasInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aliasInput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
+            this.aliasInput.Location = new System.Drawing.Point(5, 25);
+            this.aliasInput.Name = "aliasInput";
+            this.aliasInput.Size = new System.Drawing.Size(266, 26);
+            this.aliasInput.TabIndex = 0;
+            // 
+            // aliasInputLabel
+            // 
+            this.aliasInputLabel.AutoSize = true;
+            this.aliasInputLabel.Location = new System.Drawing.Point(8, 6);
+            this.aliasInputLabel.Name = "aliasInputLabel";
+            this.aliasInputLabel.Size = new System.Drawing.Size(38, 16);
+            this.aliasInputLabel.TabIndex = 2;
+            this.aliasInputLabel.Text = "Alias";
+            // 
+            // viewGroupBox
+            // 
+            this.viewGroupBox.Controls.Add(this.userAccessCheck);
+            this.viewGroupBox.Controls.Add(this.passwordAccessCheck);
+            this.viewGroupBox.Controls.Add(this.colorSelectorContainer);
+            this.viewGroupBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.viewGroupBox.Location = new System.Drawing.Point(12, 237);
+            this.viewGroupBox.Name = "viewGroupBox";
+            this.viewGroupBox.Size = new System.Drawing.Size(290, 113);
+            this.viewGroupBox.TabIndex = 1;
+            this.viewGroupBox.TabStop = false;
+            this.viewGroupBox.Text = "Visualización";
+            this.viewGroupBox.UseCompatibleTextRendering = true;
+            // 
+            // userAccessCheck
+            // 
+            this.userAccessCheck.AutoSize = true;
+            this.userAccessCheck.Location = new System.Drawing.Point(6, 61);
+            this.userAccessCheck.Name = "userAccessCheck";
+            this.userAccessCheck.Size = new System.Drawing.Size(176, 20);
+            this.userAccessCheck.TabIndex = 3;
+            this.userAccessCheck.Text = "Acceso rápido a Usuario";
+            this.userAccessCheck.UseVisualStyleBackColor = true;
+            // 
+            // passwordAccessCheck
+            // 
+            this.passwordAccessCheck.AutoSize = true;
+            this.passwordAccessCheck.Location = new System.Drawing.Point(6, 87);
+            this.passwordAccessCheck.Name = "passwordAccessCheck";
+            this.passwordAccessCheck.Size = new System.Drawing.Size(198, 20);
+            this.passwordAccessCheck.TabIndex = 2;
+            this.passwordAccessCheck.Text = "Acceso rápido a Contraseña";
+            this.passwordAccessCheck.UseVisualStyleBackColor = true;
             // 
             // colorSelectorContainer
             // 
-            this.colorSelectorContainer.Controls.Add(this.panel8);
-            this.colorSelectorContainer.Controls.Add(this.panel5);
-            this.colorSelectorContainer.Controls.Add(this.panel2);
-            this.colorSelectorContainer.Controls.Add(this.panel9);
-            this.colorSelectorContainer.Controls.Add(this.panel3);
-            this.colorSelectorContainer.Controls.Add(this.panel6);
-            this.colorSelectorContainer.Controls.Add(this.panel7);
-            this.colorSelectorContainer.Controls.Add(this.panel10);
-            this.colorSelectorContainer.Controls.Add(this.panel4);
+            this.colorSelectorContainer.Controls.Add(this.whiteColorPanel);
+            this.colorSelectorContainer.Controls.Add(this.yellowColorPanel);
+            this.colorSelectorContainer.Controls.Add(this.blackColorPanel);
+            this.colorSelectorContainer.Controls.Add(this.bueColorPanel);
+            this.colorSelectorContainer.Controls.Add(this.purpleColorPanel);
+            this.colorSelectorContainer.Controls.Add(this.orangeColorPanel);
+            this.colorSelectorContainer.Controls.Add(this.redColorPanel);
+            this.colorSelectorContainer.Controls.Add(this.greenColorPanel);
+            this.colorSelectorContainer.Controls.Add(this.pinkColorPanel);
             this.colorSelectorContainer.Location = new System.Drawing.Point(6, 21);
             this.colorSelectorContainer.Name = "colorSelectorContainer";
             this.colorSelectorContainer.Size = new System.Drawing.Size(278, 34);
             this.colorSelectorContainer.TabIndex = 2;
             // 
-            // panel2
+            // whiteColorPanel
             // 
-            this.panel2.BackColor = System.Drawing.Color.Black;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Location = new System.Drawing.Point(7, 4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(24, 24);
-            this.panel2.TabIndex = 3;
+            this.whiteColorPanel.BackColor = System.Drawing.Color.White;
+            this.whiteColorPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.whiteColorPanel.Location = new System.Drawing.Point(247, 4);
+            this.whiteColorPanel.Name = "whiteColorPanel";
+            this.whiteColorPanel.Size = new System.Drawing.Size(24, 24);
+            this.whiteColorPanel.TabIndex = 5;
             // 
-            // panel3
+            // yellowColorPanel
             // 
-            this.panel3.BackColor = System.Drawing.Color.Purple;
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Location = new System.Drawing.Point(37, 4);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(24, 24);
-            this.panel3.TabIndex = 4;
+            this.yellowColorPanel.BackColor = System.Drawing.Color.Yellow;
+            this.yellowColorPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.yellowColorPanel.Location = new System.Drawing.Point(157, 4);
+            this.yellowColorPanel.Name = "yellowColorPanel";
+            this.yellowColorPanel.Size = new System.Drawing.Size(24, 24);
+            this.yellowColorPanel.TabIndex = 5;
             // 
-            // panel4
+            // blackColorPanel
             // 
-            this.panel4.BackColor = System.Drawing.Color.DeepPink;
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel4.Location = new System.Drawing.Point(67, 4);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(24, 24);
-            this.panel4.TabIndex = 3;
+            this.blackColorPanel.BackColor = System.Drawing.Color.Black;
+            this.blackColorPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.blackColorPanel.Location = new System.Drawing.Point(7, 4);
+            this.blackColorPanel.Name = "blackColorPanel";
+            this.blackColorPanel.Size = new System.Drawing.Size(24, 24);
+            this.blackColorPanel.TabIndex = 3;
             // 
-            // panel5
+            // bueColorPanel
             // 
-            this.panel5.BackColor = System.Drawing.Color.Yellow;
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Location = new System.Drawing.Point(157, 4);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(24, 24);
-            this.panel5.TabIndex = 5;
+            this.bueColorPanel.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.bueColorPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bueColorPanel.Location = new System.Drawing.Point(217, 4);
+            this.bueColorPanel.Name = "bueColorPanel";
+            this.bueColorPanel.Size = new System.Drawing.Size(24, 24);
+            this.bueColorPanel.TabIndex = 7;
             // 
-            // panel6
+            // purpleColorPanel
             // 
-            this.panel6.BackColor = System.Drawing.Color.Orange;
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Location = new System.Drawing.Point(127, 4);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(24, 24);
-            this.panel6.TabIndex = 7;
+            this.purpleColorPanel.BackColor = System.Drawing.Color.Purple;
+            this.purpleColorPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.purpleColorPanel.Location = new System.Drawing.Point(37, 4);
+            this.purpleColorPanel.Name = "purpleColorPanel";
+            this.purpleColorPanel.Size = new System.Drawing.Size(24, 24);
+            this.purpleColorPanel.TabIndex = 4;
             // 
-            // panel7
+            // orangeColorPanel
             // 
-            this.panel7.BackColor = System.Drawing.Color.Red;
-            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel7.Location = new System.Drawing.Point(97, 4);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(24, 24);
-            this.panel7.TabIndex = 6;
+            this.orangeColorPanel.BackColor = System.Drawing.Color.Orange;
+            this.orangeColorPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.orangeColorPanel.Location = new System.Drawing.Point(127, 4);
+            this.orangeColorPanel.Name = "orangeColorPanel";
+            this.orangeColorPanel.Size = new System.Drawing.Size(24, 24);
+            this.orangeColorPanel.TabIndex = 7;
             // 
-            // panel8
+            // redColorPanel
             // 
-            this.panel8.BackColor = System.Drawing.Color.White;
-            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel8.Location = new System.Drawing.Point(247, 4);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(24, 24);
-            this.panel8.TabIndex = 5;
+            this.redColorPanel.BackColor = System.Drawing.Color.Red;
+            this.redColorPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.redColorPanel.Location = new System.Drawing.Point(97, 4);
+            this.redColorPanel.Name = "redColorPanel";
+            this.redColorPanel.Size = new System.Drawing.Size(24, 24);
+            this.redColorPanel.TabIndex = 6;
             // 
-            // panel9
+            // greenColorPanel
             // 
-            this.panel9.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel9.Location = new System.Drawing.Point(217, 4);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(24, 24);
-            this.panel9.TabIndex = 7;
+            this.greenColorPanel.BackColor = System.Drawing.Color.LimeGreen;
+            this.greenColorPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.greenColorPanel.Location = new System.Drawing.Point(187, 4);
+            this.greenColorPanel.Name = "greenColorPanel";
+            this.greenColorPanel.Size = new System.Drawing.Size(24, 24);
+            this.greenColorPanel.TabIndex = 6;
             // 
-            // panel10
+            // pinkColorPanel
             // 
-            this.panel10.BackColor = System.Drawing.Color.LimeGreen;
-            this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel10.Location = new System.Drawing.Point(187, 4);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(24, 24);
-            this.panel10.TabIndex = 6;
+            this.pinkColorPanel.BackColor = System.Drawing.Color.DeepPink;
+            this.pinkColorPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pinkColorPanel.Location = new System.Drawing.Point(67, 4);
+            this.pinkColorPanel.Name = "pinkColorPanel";
+            this.pinkColorPanel.Size = new System.Drawing.Size(24, 24);
+            this.pinkColorPanel.TabIndex = 3;
             // 
-            // textBox1
+            // performAddButton
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
-            this.textBox1.Location = new System.Drawing.Point(5, 25);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(266, 26);
-            this.textBox1.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 16);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Nombre o Alias";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(6, 21);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(277, 56);
-            this.panel1.TabIndex = 3;
-            // 
-            // panel11
-            // 
-            this.panel11.Controls.Add(this.textBox2);
-            this.panel11.Controls.Add(this.label2);
-            this.panel11.Location = new System.Drawing.Point(6, 83);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(277, 56);
-            this.panel11.TabIndex = 4;
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
-            this.textBox2.Location = new System.Drawing.Point(5, 25);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(266, 26);
-            this.textBox2.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 6);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(126, 16);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Nombre de Usuario";
-            // 
-            // panel12
-            // 
-            this.panel12.Controls.Add(this.textBox3);
-            this.panel12.Controls.Add(this.label3);
-            this.panel12.Location = new System.Drawing.Point(6, 145);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(277, 56);
-            this.panel12.TabIndex = 4;
-            // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
-            this.textBox3.Location = new System.Drawing.Point(5, 25);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(266, 26);
-            this.textBox3.TabIndex = 0;
-            this.textBox3.UseSystemPasswordChar = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(8, 6);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 16);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Contraseña";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(6, 87);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(198, 20);
-            this.checkBox1.TabIndex = 2;
-            this.checkBox1.Text = "Acceso rápido a Contraseña";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(6, 61);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(176, 20);
-            this.checkBox2.TabIndex = 3;
-            this.checkBox2.Text = "Acceso rápido a Usuario";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.LightGreen;
-            this.button1.Location = new System.Drawing.Point(12, 356);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(290, 33);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Agregar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.performAddButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.performAddButton.ForeColor = System.Drawing.Color.LightGreen;
+            this.performAddButton.Location = new System.Drawing.Point(12, 356);
+            this.performAddButton.Name = "performAddButton";
+            this.performAddButton.Size = new System.Drawing.Size(290, 33);
+            this.performAddButton.TabIndex = 2;
+            this.performAddButton.Text = "Agregar";
+            this.performAddButton.UseVisualStyleBackColor = true;
             // 
             // newDataForm
             // 
@@ -311,57 +311,57 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.ClientSize = new System.Drawing.Size(314, 401);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.performAddButton);
+            this.Controls.Add(this.viewGroupBox);
+            this.Controls.Add(this.infoGroupBox);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "newDataForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar Datos";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.infoGroupBox.ResumeLayout(false);
+            this.passwordPanel.ResumeLayout(false);
+            this.passwordPanel.PerformLayout();
+            this.userPanel.ResumeLayout(false);
+            this.userPanel.PerformLayout();
+            this.aliasPanel.ResumeLayout(false);
+            this.aliasPanel.PerformLayout();
+            this.viewGroupBox.ResumeLayout(false);
+            this.viewGroupBox.PerformLayout();
             this.colorSelectorContainer.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
-            this.panel12.ResumeLayout(false);
-            this.panel12.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox infoGroupBox;
+        private System.Windows.Forms.GroupBox viewGroupBox;
         private System.Windows.Forms.Panel colorSelectorContainer;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel whiteColorPanel;
+        private System.Windows.Forms.Panel yellowColorPanel;
+        private System.Windows.Forms.Panel blackColorPanel;
+        private System.Windows.Forms.Panel bueColorPanel;
+        private System.Windows.Forms.Panel purpleColorPanel;
+        private System.Windows.Forms.Panel orangeColorPanel;
+        private System.Windows.Forms.Panel redColorPanel;
+        private System.Windows.Forms.Panel greenColorPanel;
+        private System.Windows.Forms.Panel pinkColorPanel;
+        private System.Windows.Forms.Panel passwordPanel;
+        private System.Windows.Forms.TextBox passwordInput;
+        private System.Windows.Forms.Label passInputLabel;
+        private System.Windows.Forms.Panel userPanel;
+        private System.Windows.Forms.TextBox userInput;
+        private System.Windows.Forms.Label userInputLabel;
+        private System.Windows.Forms.Panel aliasPanel;
+        private System.Windows.Forms.TextBox aliasInput;
+        private System.Windows.Forms.Label aliasInputLabel;
+        private System.Windows.Forms.CheckBox userAccessCheck;
+        private System.Windows.Forms.CheckBox passwordAccessCheck;
+        private System.Windows.Forms.Button performAddButton;
     }
 }
