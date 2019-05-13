@@ -59,25 +59,26 @@
             // 
             this.dataMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.dataMenu.DropShadowEnabled = false;
+            this.dataMenu.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripSeparator1,
             this.mostrarLSPMToolStripMenuItem,
             this.salirToolStripMenuItem});
             this.dataMenu.Name = "dataMenu";
             this.dataMenu.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.dataMenu.Size = new System.Drawing.Size(149, 54);
+            this.dataMenu.Size = new System.Drawing.Size(175, 58);
             this.dataMenu.Text = "LSPM";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(145, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // mostrarLSPMToolStripMenuItem
             // 
             this.mostrarLSPMToolStripMenuItem.ForeColor = System.Drawing.Color.MediumAquamarine;
             this.mostrarLSPMToolStripMenuItem.Name = "mostrarLSPMToolStripMenuItem";
-            this.mostrarLSPMToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.mostrarLSPMToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.mostrarLSPMToolStripMenuItem.Text = "Mostrar LSPM";
             this.mostrarLSPMToolStripMenuItem.Click += new System.EventHandler(this.mostrarLSPMToolStripMenuItem_Click);
             // 
@@ -85,7 +86,7 @@
             // 
             this.salirToolStripMenuItem.ForeColor = System.Drawing.Color.Tomato;
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -105,7 +106,7 @@
             this.superiorMenu.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.superiorMenu.Size = new System.Drawing.Size(275, 37);
             this.superiorMenu.TabIndex = 1;
-            this.superiorMenu.Text = "toolStrip1";
+            this.superiorMenu.Text = "menu";
             // 
             // addCredsButton
             // 
