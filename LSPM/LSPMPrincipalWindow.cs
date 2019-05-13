@@ -177,5 +177,7 @@ namespace LSPM
             editCredsButton.Enabled = enable;
             deleteCredsButton.Enabled = enable;
         }
+
+        private void TaskbarHandler_DoubleClick( object sender, EventArgs e ) => Show();
     }
 }

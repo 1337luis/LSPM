@@ -44,7 +44,7 @@
             this.startButton.Location = new System.Drawing.Point(12, 155);
             this.startButton.Name = "startButton";
             this.startButton.Size = new System.Drawing.Size(375, 34);
-            this.startButton.TabIndex = 0;
+            this.startButton.TabIndex = 2;
             this.startButton.Text = "¡Comenzamos!";
             this.startButton.UseVisualStyleBackColor = true;
             this.startButton.Click += new System.EventHandler(this.startButton_Click);
@@ -70,7 +70,7 @@
             this.passwordInput1.Location = new System.Drawing.Point(55, 47);
             this.passwordInput1.Name = "passwordInput1";
             this.passwordInput1.Size = new System.Drawing.Size(292, 26);
-            this.passwordInput1.TabIndex = 2;
+            this.passwordInput1.TabIndex = 0;
             this.passwordInput1.UseSystemPasswordChar = true;
             // 
             // passwordLabel1

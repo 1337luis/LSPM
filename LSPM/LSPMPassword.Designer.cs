@@ -55,7 +55,7 @@
             this.passwordTextBox.Location = new System.Drawing.Point(55, 45);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(292, 29);
-            this.passwordTextBox.TabIndex = 5;
+            this.passwordTextBox.TabIndex = 0;
             this.passwordTextBox.UseSystemPasswordChar = true;
             // 
             // loginButton
@@ -66,7 +66,7 @@
             this.loginButton.Location = new System.Drawing.Point(12, 97);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(177, 34);
-            this.loginButton.TabIndex = 4;
+            this.loginButton.TabIndex = 1;
             this.loginButton.Text = "Iniciar";
             this.loginButton.UseVisualStyleBackColor = true;
             this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
@@ -79,7 +79,7 @@
             this.loginSaveButton.Location = new System.Drawing.Point(195, 97);
             this.loginSaveButton.Name = "loginSaveButton";
             this.loginSaveButton.Size = new System.Drawing.Size(192, 34);
-            this.loginSaveButton.TabIndex = 7;
+            this.loginSaveButton.TabIndex = 2;
             this.loginSaveButton.Text = "Iniciar y Recordar";
             this.loginSaveButton.UseVisualStyleBackColor = true;
             this.loginSaveButton.Click += new System.EventHandler(this.loginSaveButton_Click);

@@ -36,12 +36,12 @@
             this.mostrarLSPMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.superiorMenu = new System.Windows.Forms.ToolStrip();
-            this.credsView = new System.Windows.Forms.ListView();
-            this.icons = new System.Windows.Forms.ImageList(this.components);
             this.addCredsButton = new System.Windows.Forms.ToolStripButton();
             this.editCredsButton = new System.Windows.Forms.ToolStripButton();
             this.deleteCredsButton = new System.Windows.Forms.ToolStripButton();
             this.configButton = new System.Windows.Forms.ToolStripButton();
+            this.credsView = new System.Windows.Forms.ListView();
+            this.icons = new System.Windows.Forms.ImageList(this.components);
             this.dataMenu.SuspendLayout();
             this.superiorMenu.SuspendLayout();
             this.SuspendLayout();
@@ -53,6 +53,7 @@
             this.TaskbarHandler.Icon = ((System.Drawing.Icon)(resources.GetObject("TaskbarHandler.Icon")));
             this.TaskbarHandler.Tag = "LSPM";
             this.TaskbarHandler.Text = "LSPM";
+            this.TaskbarHandler.DoubleClick += new System.EventHandler(this.TaskbarHandler_DoubleClick);
             // 
             // dataMenu
             // 
@@ -90,8 +91,10 @@
             // 
             // superiorMenu
             // 
+            this.superiorMenu.AutoSize = false;
             this.superiorMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
             this.superiorMenu.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.superiorMenu.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.superiorMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addCredsButton,
             this.editCredsButton,
@@ -100,9 +103,53 @@
             this.superiorMenu.Location = new System.Drawing.Point(0, 0);
             this.superiorMenu.Name = "superiorMenu";
             this.superiorMenu.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.superiorMenu.Size = new System.Drawing.Size(275, 25);
+            this.superiorMenu.Size = new System.Drawing.Size(275, 37);
             this.superiorMenu.TabIndex = 1;
             this.superiorMenu.Text = "toolStrip1";
+            // 
+            // addCredsButton
+            // 
+            this.addCredsButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.addCredsButton.Image = global::LSPM.Properties.Resources.add;
+            this.addCredsButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.addCredsButton.Name = "addCredsButton";
+            this.addCredsButton.Size = new System.Drawing.Size(28, 34);
+            this.addCredsButton.Text = "Añadir Acceso";
+            this.addCredsButton.Click += new System.EventHandler(this.addCredsButton_Click);
+            // 
+            // editCredsButton
+            // 
+            this.editCredsButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.editCredsButton.Enabled = false;
+            this.editCredsButton.Image = global::LSPM.Properties.Resources.edit;
+            this.editCredsButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.editCredsButton.Name = "editCredsButton";
+            this.editCredsButton.Size = new System.Drawing.Size(28, 34);
+            this.editCredsButton.Text = "Modificar Credenciales";
+            this.editCredsButton.Click += new System.EventHandler(this.editCredsButton_Click);
+            // 
+            // deleteCredsButton
+            // 
+            this.deleteCredsButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.deleteCredsButton.Enabled = false;
+            this.deleteCredsButton.Image = global::LSPM.Properties.Resources.del;
+            this.deleteCredsButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.deleteCredsButton.Name = "deleteCredsButton";
+            this.deleteCredsButton.Size = new System.Drawing.Size(28, 34);
+            this.deleteCredsButton.Text = "Eliminar Credenciales";
+            this.deleteCredsButton.Click += new System.EventHandler(this.deleteCredsButton_Click);
+            // 
+            // configButton
+            // 
+            this.configButton.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.configButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.configButton.Image = global::LSPM.Properties.Resources.config1;
+            this.configButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.configButton.Name = "configButton";
+            this.configButton.Size = new System.Drawing.Size(28, 34);
+            this.configButton.Text = "toolStripButton1";
+            this.configButton.ToolTipText = "Configuración";
+            this.configButton.Click += new System.EventHandler(this.configButton_Click);
             // 
             // credsView
             // 
@@ -117,11 +164,11 @@
             this.credsView.GridLines = true;
             this.credsView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
             this.credsView.LargeImageList = this.icons;
-            this.credsView.Location = new System.Drawing.Point(0, 23);
+            this.credsView.Location = new System.Drawing.Point(0, 33);
             this.credsView.MultiSelect = false;
             this.credsView.Name = "credsView";
             this.credsView.ShowGroups = false;
-            this.credsView.Size = new System.Drawing.Size(275, 427);
+            this.credsView.Size = new System.Drawing.Size(275, 417);
             this.credsView.SmallImageList = this.icons;
             this.credsView.TabIndex = 2;
             this.credsView.UseCompatibleStateImageBehavior = false;
@@ -143,50 +190,6 @@
             this.icons.Images.SetKeyName(7, "white.png");
             this.icons.Images.SetKeyName(8, "yellow.png");
             // 
-            // addCredsButton
-            // 
-            this.addCredsButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.addCredsButton.Image = global::LSPM.Properties.Resources.add;
-            this.addCredsButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.addCredsButton.Name = "addCredsButton";
-            this.addCredsButton.Size = new System.Drawing.Size(23, 22);
-            this.addCredsButton.Text = "Añadir Acceso";
-            this.addCredsButton.Click += new System.EventHandler(this.addCredsButton_Click);
-            // 
-            // editCredsButton
-            // 
-            this.editCredsButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.editCredsButton.Enabled = false;
-            this.editCredsButton.Image = global::LSPM.Properties.Resources.edit;
-            this.editCredsButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.editCredsButton.Name = "editCredsButton";
-            this.editCredsButton.Size = new System.Drawing.Size(23, 22);
-            this.editCredsButton.Text = "Modificar Credenciales";
-            this.editCredsButton.Click += new System.EventHandler(this.editCredsButton_Click);
-            // 
-            // deleteCredsButton
-            // 
-            this.deleteCredsButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.deleteCredsButton.Enabled = false;
-            this.deleteCredsButton.Image = global::LSPM.Properties.Resources.del;
-            this.deleteCredsButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.deleteCredsButton.Name = "deleteCredsButton";
-            this.deleteCredsButton.Size = new System.Drawing.Size(23, 22);
-            this.deleteCredsButton.Text = "Eliminar Credenciales";
-            this.deleteCredsButton.Click += new System.EventHandler(this.deleteCredsButton_Click);
-            // 
-            // configButton
-            // 
-            this.configButton.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.configButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.configButton.Image = global::LSPM.Properties.Resources.config1;
-            this.configButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.configButton.Name = "configButton";
-            this.configButton.Size = new System.Drawing.Size(23, 22);
-            this.configButton.Text = "toolStripButton1";
-            this.configButton.ToolTipText = "Configuración";
-            this.configButton.Click += new System.EventHandler(this.configButton_Click);
-            // 
             // LSPMPrincipalWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -203,7 +206,6 @@
             this.superiorMenu.ResumeLayout(false);
             this.superiorMenu.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
