@@ -79,6 +79,12 @@
       <DependentUpon>editDataForm.cs</DependentUpon>
     </Compile>
     <Compile Include="LSPMDatabase.cs" />
+    <Compile Include="LSPMFloatingWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LSPMFloatingWindow.Designer.cs">
+      <DependentUpon>LSPMFloatingWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="LSPMMenuItem.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -117,6 +123,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="editDataForm.resx">
       <DependentUpon>editDataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LSPMFloatingWindow.resx">
+      <DependentUpon>LSPMFloatingWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LSPMPassword.resx">
       <DependentUpon>LSPMPassword.cs</DependentUpon>
@@ -159,6 +168,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="LSPM.ico" />
+    <None Include="Resources\user.png" />
+    <None Include="Resources\key.png" />
+    <None Include="Resources\LSPMFloat.png" />
     <None Include="Resources\config1.png" />
     <None Include="Resources\config.png" />
     <None Include="Resources\edit.png" />

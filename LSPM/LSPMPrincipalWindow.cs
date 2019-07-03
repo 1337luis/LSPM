@@ -1,13 +1,9 @@
 ﻿using LiteDB;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace LSPM
@@ -15,6 +11,7 @@ namespace LSPM
     public partial class LSPMPrincipalWindow : Form
     {
         List<LSPMData> credentials = new List<LSPMData>();
+        LSPMFloatingWindow floatingWindow = new LSPMFloatingWindow();
 
         public LSPMPrincipalWindow() => InitializeComponent();
 
@@ -24,25 +21,27 @@ namespace LSPM
             if( File.Exists( @"./LSPM.db" ) )
             {
                 r = new LSPMPassword().ShowDialog();
-            } else
+            }
+            else
             {
                 Properties.Settings.Default.pwdHash = "";
                 Properties.Settings.Default.useLastPwd = false;
                 Properties.Settings.Default.Save();
                 r = new LSPMStart().ShowDialog();
-                
+
             }
 
-            if( r == DialogResult.OK)
+            if( r == DialogResult.OK )
             {
                 TaskbarHandler.Visible = true;
                 loadData();
-            } else
+            }
+            else
             {
                 Application.Exit();
             }
 
-            
+
         }
 
         private void addDataButton_Click( object sender, EventArgs e )
@@ -63,6 +62,7 @@ namespace LSPM
 
         private void loadData()
         {
+            floatingWindow.setContextMenuStrip( dataMenu );
             checkSelectedItems();
 
             LSPMDatabase database = new LSPMDatabase( Properties.Settings.Default.pwdHash );
@@ -78,24 +78,31 @@ namespace LSPM
             {
                 bool addSeparator = false;
                 ListViewItem a = new ListViewItem( data.lAlias );
-                a.ImageIndex = (int)data.lDataIcon;
-
+                a.ImageIndex = ( int )data.lDataIcon;
                 credsView.Items.Add( a );
-                if( data.lUserFastAccess )
+
+                ToolStripMenuItem mSup = new ToolStripMenuItem(data.lAlias, icons.Images[(int)data.lDataIcon]);
+                mSup.BackColor = Color.FromArgb(33, 33, 33);
+                
+                mSup.ForeColor = Color.FromArgb(100, 200, 255);
+                mSup.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(0)));
+
+                if ( data.lUserFastAccess )
                 {
-                    LSPMMenuItem tItem = new LSPMMenuItem( data.lAlias + " - Usuario", icons.Images[ ( int )data.lDataIcon ], data.lUser, TaskbarHandler );
-                    tItem.ForeColor = Color.FromArgb( 100, 200, 255 );
-                    dataMenu.Items.Add( tItem );
+                    LSPMMenuItem tItem = new LSPMMenuItem( "Usuario", Properties.Resources.user, data.lUser, TaskbarHandler );
+                    tItem.BackColor = Color.FromArgb(33, 33, 33);
+                    mSup.DropDownItems.Add( tItem );
                     addSeparator = true;
                 }
                 if( data.lPasswordFastAccess )
                 {
-                    LSPMMenuItem tItem = new LSPMMenuItem( data.lAlias + " - Clave", icons.Images[ ( int )data.lDataIcon ], data.lPass, TaskbarHandler );
-                    tItem.ForeColor = Color.Gold;
-                    dataMenu.Items.Add( tItem );
+                    LSPMMenuItem tItem = new LSPMMenuItem( "Clave", Properties.Resources.key, data.lPass, TaskbarHandler );
+                    tItem.BackColor = Color.FromArgb(33, 33, 33);
+                    mSup.DropDownItems.Add( tItem );
                     addSeparator = true;
                 }
-                if( addSeparator ) dataMenu.Items.Add( new ToolStripSeparator() );
+                if(data.lPasswordFastAccess || data.lUserFastAccess) dataMenu.Items.Add(mSup);
+                //if ( addSeparator ) dataMenu.Items.Add( new ToolStripSeparator() );
             }
             dataMenu.Items.Add( toolStripSeparator1 );
             dataMenu.Items.Add( mostrarLSPMToolStripMenuItem );
@@ -122,7 +129,7 @@ namespace LSPM
 
         private void configButton_Click( object sender, EventArgs e )
         {
-            if( new LSPMSettings().ShowDialog() == DialogResult.OK)
+            if( new LSPMSettings().ShowDialog() == DialogResult.OK )
             {
                 loadData();
             }
@@ -149,13 +156,13 @@ namespace LSPM
         private void deleteCredsButton_Click( object sender, EventArgs e )
         {
             string alias = credsView.SelectedItems[ 0 ].Text;
-            if( MessageBox.Show("¿Realmente desea eliminar la información seleccionada?", "¿Eliminar?", MessageBoxButtons.OKCancel) == DialogResult.OK )
+            if( MessageBox.Show( "¿Realmente desea eliminar la información seleccionada?", "¿Eliminar?", MessageBoxButtons.OKCancel ) == DialogResult.OK )
             {
                 LSPMDatabase database = new LSPMDatabase( Properties.Settings.Default.pwdHash );
                 LiteCollection<LSPMData> col = database.getDBCollection();
                 col.EnsureIndex( x => x.lAlias );
 
-                col.Delete( x => x.lAlias.Equals(alias) );
+                col.Delete( x => x.lAlias.Equals( alias ) );
                 loadData();
             }
         }
@@ -179,5 +186,22 @@ namespace LSPM
         }
 
         private void TaskbarHandler_DoubleClick( object sender, EventArgs e ) => Show();
+
+        private void showLSPMFloatingWindow_Click( object sender, EventArgs e )
+        {
+            if( showLSPMFloatingWindow.Checked )
+            {
+                floatingWindow.Show();
+            }
+            else
+            {
+                floatingWindow.Hide();
+            }
+        }
+
+        private void TaskbarHandler_MouseClick(object sender, MouseEventArgs e)
+        {
+//            TaskbarHandler.ContextMenuStrip.Show(e.X, e.Y);
+        }
     }
 }

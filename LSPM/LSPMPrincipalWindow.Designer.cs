@@ -40,6 +40,8 @@
             this.editCredsButton = new System.Windows.Forms.ToolStripButton();
             this.deleteCredsButton = new System.Windows.Forms.ToolStripButton();
             this.configButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.showLSPMFloatingWindow = new System.Windows.Forms.ToolStripButton();
             this.credsView = new System.Windows.Forms.ListView();
             this.icons = new System.Windows.Forms.ImageList(this.components);
             this.dataMenu.SuspendLayout();
@@ -54,6 +56,7 @@
             this.TaskbarHandler.Tag = "LSPM";
             this.TaskbarHandler.Text = "LSPM";
             this.TaskbarHandler.DoubleClick += new System.EventHandler(this.TaskbarHandler_DoubleClick);
+            this.TaskbarHandler.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TaskbarHandler_MouseClick);
             // 
             // dataMenu
             // 
@@ -72,13 +75,13 @@
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(171, 6);
             // 
             // mostrarLSPMToolStripMenuItem
             // 
             this.mostrarLSPMToolStripMenuItem.ForeColor = System.Drawing.Color.MediumAquamarine;
             this.mostrarLSPMToolStripMenuItem.Name = "mostrarLSPMToolStripMenuItem";
-            this.mostrarLSPMToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.mostrarLSPMToolStripMenuItem.Size = new System.Drawing.Size(174, 24);
             this.mostrarLSPMToolStripMenuItem.Text = "Mostrar LSPM";
             this.mostrarLSPMToolStripMenuItem.Click += new System.EventHandler(this.mostrarLSPMToolStripMenuItem_Click);
             // 
@@ -86,7 +89,7 @@
             // 
             this.salirToolStripMenuItem.ForeColor = System.Drawing.Color.Tomato;
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(174, 24);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -100,7 +103,9 @@
             this.addCredsButton,
             this.editCredsButton,
             this.deleteCredsButton,
-            this.configButton});
+            this.configButton,
+            this.toolStripSeparator2,
+            this.showLSPMFloatingWindow});
             this.superiorMenu.Location = new System.Drawing.Point(0, 0);
             this.superiorMenu.Name = "superiorMenu";
             this.superiorMenu.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
@@ -151,6 +156,22 @@
             this.configButton.Text = "toolStripButton1";
             this.configButton.ToolTipText = "Configuración";
             this.configButton.Click += new System.EventHandler(this.configButton_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 37);
+            // 
+            // showLSPMFloatingWindow
+            // 
+            this.showLSPMFloatingWindow.CheckOnClick = true;
+            this.showLSPMFloatingWindow.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.showLSPMFloatingWindow.Image = global::LSPM.Properties.Resources.LSPMFloat;
+            this.showLSPMFloatingWindow.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.showLSPMFloatingWindow.Name = "showLSPMFloatingWindow";
+            this.showLSPMFloatingWindow.Size = new System.Drawing.Size(28, 34);
+            this.showLSPMFloatingWindow.Text = "LSPM Flotante";
+            this.showLSPMFloatingWindow.Click += new System.EventHandler(this.showLSPMFloatingWindow_Click);
             // 
             // credsView
             // 
@@ -224,5 +245,7 @@
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton configButton;
         private System.Windows.Forms.ImageList icons;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripButton showLSPMFloatingWindow;
     }
 }
