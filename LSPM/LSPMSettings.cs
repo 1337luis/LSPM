@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Win32;
 
 namespace LSPM
 {
@@ -17,7 +18,10 @@ namespace LSPM
         public LSPMSettings()
         {
             InitializeComponent();
+            RegistryKey rk = Registry.CurrentUser.OpenSubKey( "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true );
             minTBCheckBox.Checked = Properties.Settings.Default.minimTray;
+            runSTCheckBox.Checked = rk.GetValue( "LSPM" ) == null ? false:true ;
+            runmCheckBox.Checked = Properties.Settings.Default.runMinim;
         }
 
         private void forgPasButton_Click( object sender, EventArgs e )
@@ -73,6 +77,22 @@ namespace LSPM
         {
             File.Delete( @"./LSPM.db" );
             Application.Exit();
+        }
+
+        private void runSTCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            RegistryKey rk = Registry.CurrentUser.OpenSubKey( "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true );
+
+            if (runSTCheckBox.Checked)
+                rk.SetValue( "LSPM", Application.ExecutablePath );
+            else
+                rk.DeleteValue( "LSPM", false );
+        }
+
+        private void runmCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.runMinim = runmCheckBox.Checked;
+            Properties.Settings.Default.Save();
         }
     }
 }

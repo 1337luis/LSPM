@@ -37,6 +37,8 @@
             this.DBTab = new System.Windows.Forms.TabPage();
             this.deleteDBButton = new System.Windows.Forms.Button();
             this.clearDBButton = new System.Windows.Forms.Button();
+            this.runSTCheckBox = new System.Windows.Forms.CheckBox();
+            this.runmCheckBox = new System.Windows.Forms.CheckBox();
             this.LSPMTabs.SuspendLayout();
             this.UserTab.SuspendLayout();
             this.checkBoxPanel.SuspendLayout();
@@ -53,7 +55,7 @@
             this.LSPMTabs.Multiline = true;
             this.LSPMTabs.Name = "LSPMTabs";
             this.LSPMTabs.SelectedIndex = 0;
-            this.LSPMTabs.Size = new System.Drawing.Size(295, 180);
+            this.LSPMTabs.Size = new System.Drawing.Size(295, 215);
             this.LSPMTabs.TabIndex = 0;
             // 
             // UserTab
@@ -65,22 +67,24 @@
             this.UserTab.Location = new System.Drawing.Point(4, 25);
             this.UserTab.Name = "UserTab";
             this.UserTab.Padding = new System.Windows.Forms.Padding(3);
-            this.UserTab.Size = new System.Drawing.Size(287, 151);
+            this.UserTab.Size = new System.Drawing.Size(287, 186);
             this.UserTab.TabIndex = 0;
             this.UserTab.Text = "Usuario";
             // 
             // checkBoxPanel
             // 
+            this.checkBoxPanel.Controls.Add(this.runmCheckBox);
+            this.checkBoxPanel.Controls.Add(this.runSTCheckBox);
             this.checkBoxPanel.Controls.Add(this.minTBCheckBox);
             this.checkBoxPanel.Location = new System.Drawing.Point(8, 78);
             this.checkBoxPanel.Name = "checkBoxPanel";
-            this.checkBoxPanel.Size = new System.Drawing.Size(271, 66);
+            this.checkBoxPanel.Size = new System.Drawing.Size(271, 100);
             this.checkBoxPanel.TabIndex = 2;
             // 
             // minTBCheckBox
             // 
             this.minTBCheckBox.AutoSize = true;
-            this.minTBCheckBox.Location = new System.Drawing.Point(29, 23);
+            this.minTBCheckBox.Location = new System.Drawing.Point(29, 14);
             this.minTBCheckBox.Name = "minTBCheckBox";
             this.minTBCheckBox.Size = new System.Drawing.Size(213, 20);
             this.minTBCheckBox.TabIndex = 1;
@@ -109,7 +113,7 @@
             this.DBTab.Location = new System.Drawing.Point(4, 25);
             this.DBTab.Name = "DBTab";
             this.DBTab.Padding = new System.Windows.Forms.Padding(3);
-            this.DBTab.Size = new System.Drawing.Size(287, 151);
+            this.DBTab.Size = new System.Drawing.Size(287, 186);
             this.DBTab.TabIndex = 1;
             this.DBTab.Text = "DB";
             // 
@@ -117,9 +121,9 @@
             // 
             this.deleteDBButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.deleteDBButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.deleteDBButton.Location = new System.Drawing.Point(8, 78);
+            this.deleteDBButton.Location = new System.Drawing.Point(10, 93);
             this.deleteDBButton.Name = "deleteDBButton";
-            this.deleteDBButton.Size = new System.Drawing.Size(271, 66);
+            this.deleteDBButton.Size = new System.Drawing.Size(269, 85);
             this.deleteDBButton.TabIndex = 1;
             this.deleteDBButton.Text = "Eliminar Base de Datos";
             this.deleteDBButton.UseVisualStyleBackColor = true;
@@ -131,18 +135,40 @@
             this.clearDBButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.clearDBButton.Location = new System.Drawing.Point(8, 6);
             this.clearDBButton.Name = "clearDBButton";
-            this.clearDBButton.Size = new System.Drawing.Size(271, 66);
+            this.clearDBButton.Size = new System.Drawing.Size(271, 81);
             this.clearDBButton.TabIndex = 0;
             this.clearDBButton.Text = "Vaciar Base de Datos";
             this.clearDBButton.UseVisualStyleBackColor = true;
             this.clearDBButton.Click += new System.EventHandler(this.clearDBButton_Click);
+            // 
+            // runSTCheckBox
+            // 
+            this.runSTCheckBox.AutoSize = true;
+            this.runSTCheckBox.Location = new System.Drawing.Point(29, 40);
+            this.runSTCheckBox.Name = "runSTCheckBox";
+            this.runSTCheckBox.Size = new System.Drawing.Size(219, 20);
+            this.runSTCheckBox.TabIndex = 2;
+            this.runSTCheckBox.Text = "Abrir LSPM al arrancar Windows";
+            this.runSTCheckBox.UseVisualStyleBackColor = true;
+            this.runSTCheckBox.CheckedChanged += new System.EventHandler(this.runSTCheckBox_CheckedChanged);
+            // 
+            // runmCheckBox
+            // 
+            this.runmCheckBox.AutoSize = true;
+            this.runmCheckBox.Location = new System.Drawing.Point(29, 66);
+            this.runmCheckBox.Name = "runmCheckBox";
+            this.runmCheckBox.Size = new System.Drawing.Size(232, 20);
+            this.runmCheckBox.TabIndex = 3;
+            this.runmCheckBox.Text = "Ejecutar minimizado en la bandeja";
+            this.runmCheckBox.UseVisualStyleBackColor = true;
+            this.runmCheckBox.CheckedChanged += new System.EventHandler(this.runmCheckBox_CheckedChanged);
             // 
             // LSPMSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.ClientSize = new System.Drawing.Size(295, 180);
+            this.ClientSize = new System.Drawing.Size(295, 215);
             this.Controls.Add(this.LSPMTabs);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -170,5 +196,7 @@
         private System.Windows.Forms.Button forgPasButton;
         private System.Windows.Forms.Button deleteDBButton;
         private System.Windows.Forms.Button clearDBButton;
+        private System.Windows.Forms.CheckBox runSTCheckBox;
+        private System.Windows.Forms.CheckBox runmCheckBox;
     }
 }

@@ -35,6 +35,7 @@ namespace LSPM
             {
                 TaskbarHandler.Visible = true;
                 loadData();
+                if (Properties.Settings.Default.runMinim) toTray();
             }
             else
             {
@@ -120,6 +121,12 @@ namespace LSPM
                 e.Cancel = true;
                 Hide();
             }
+        }
+
+        private void toTray()
+        {
+            Hide();
+            Close();
         }
 
         private void credsView_ItemSelectionChanged( object sender, ListViewItemSelectionChangedEventArgs e )
