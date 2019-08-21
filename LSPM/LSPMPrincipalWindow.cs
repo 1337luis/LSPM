@@ -106,6 +106,7 @@ namespace LSPM
                 //if ( addSeparator ) dataMenu.Items.Add( new ToolStripSeparator() );
             }
             dataMenu.Items.Add( toolStripSeparator1 );
+            dataMenu.Items.Add( generarPass );
             dataMenu.Items.Add( mostrarLSPMToolStripMenuItem );
             dataMenu.Items.Add( salirToolStripMenuItem );
         }
@@ -209,6 +210,17 @@ namespace LSPM
         private void TaskbarHandler_MouseClick(object sender, MouseEventArgs e)
         {
 //            TaskbarHandler.ContextMenuStrip.Show(e.X, e.Y);
+        }
+
+        private void GenerarPass_Click(object sender, EventArgs e)
+        {
+            List< char > chars = new List< char >();
+            Random rand = new Random( DateTime.Now.Millisecond );
+            String pass = "";
+            for( int x = 32; x <= 126; x++ ) chars.Add( ( char )x );
+            for(int x = 0; x < 10; x++ ) pass += chars.ToArray()[rand.Next( chars.Count )].ToString();
+            Clipboard.SetText( pass );
+            TaskbarHandler.ShowBalloonTip(500, "Contraseña Aleatoria Copiada", pass, ToolTipIcon.Info);
         }
     }
 }

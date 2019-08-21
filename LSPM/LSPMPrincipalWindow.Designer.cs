@@ -44,6 +44,7 @@
             this.showLSPMFloatingWindow = new System.Windows.Forms.ToolStripButton();
             this.credsView = new System.Windows.Forms.ListView();
             this.icons = new System.Windows.Forms.ImageList(this.components);
+            this.generarPass = new System.Windows.Forms.ToolStripMenuItem();
             this.dataMenu.SuspendLayout();
             this.superiorMenu.SuspendLayout();
             this.SuspendLayout();
@@ -65,23 +66,24 @@
             this.dataMenu.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripSeparator1,
+            this.generarPass,
             this.mostrarLSPMToolStripMenuItem,
             this.salirToolStripMenuItem});
             this.dataMenu.Name = "dataMenu";
             this.dataMenu.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.dataMenu.Size = new System.Drawing.Size(175, 58);
+            this.dataMenu.Size = new System.Drawing.Size(215, 104);
             this.dataMenu.Text = "LSPM";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(171, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(211, 6);
             // 
             // mostrarLSPMToolStripMenuItem
             // 
             this.mostrarLSPMToolStripMenuItem.ForeColor = System.Drawing.Color.MediumAquamarine;
             this.mostrarLSPMToolStripMenuItem.Name = "mostrarLSPMToolStripMenuItem";
-            this.mostrarLSPMToolStripMenuItem.Size = new System.Drawing.Size(174, 24);
+            this.mostrarLSPMToolStripMenuItem.Size = new System.Drawing.Size(214, 24);
             this.mostrarLSPMToolStripMenuItem.Text = "Mostrar LSPM";
             this.mostrarLSPMToolStripMenuItem.Click += new System.EventHandler(this.mostrarLSPMToolStripMenuItem_Click);
             // 
@@ -89,7 +91,7 @@
             // 
             this.salirToolStripMenuItem.ForeColor = System.Drawing.Color.Tomato;
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(174, 24);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(214, 24);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -171,6 +173,7 @@
             this.showLSPMFloatingWindow.Name = "showLSPMFloatingWindow";
             this.showLSPMFloatingWindow.Size = new System.Drawing.Size(28, 34);
             this.showLSPMFloatingWindow.Text = "LSPM Flotante";
+            this.showLSPMFloatingWindow.Visible = false;
             this.showLSPMFloatingWindow.Click += new System.EventHandler(this.showLSPMFloatingWindow_Click);
             // 
             // credsView
@@ -185,6 +188,7 @@
             this.credsView.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
             this.credsView.GridLines = true;
             this.credsView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
+            this.credsView.HideSelection = false;
             this.credsView.LargeImageList = this.icons;
             this.credsView.Location = new System.Drawing.Point(0, 33);
             this.credsView.MultiSelect = false;
@@ -211,6 +215,14 @@
             this.icons.Images.SetKeyName(6, "red.png");
             this.icons.Images.SetKeyName(7, "white.png");
             this.icons.Images.SetKeyName(8, "yellow.png");
+            // 
+            // generarPass
+            // 
+            this.generarPass.ForeColor = System.Drawing.Color.Lime;
+            this.generarPass.Name = "generarPass";
+            this.generarPass.Size = new System.Drawing.Size(214, 24);
+            this.generarPass.Text = "Generar Contraseña";
+            this.generarPass.Click += new System.EventHandler(this.GenerarPass_Click);
             // 
             // LSPMPrincipalWindow
             // 
@@ -247,5 +259,6 @@
         private System.Windows.Forms.ImageList icons;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton showLSPMFloatingWindow;
+        private System.Windows.Forms.ToolStripMenuItem generarPass;
     }
 }
